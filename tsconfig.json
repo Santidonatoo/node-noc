@@ -4,7 +4,7 @@
     "dist"
   ],
   "include":[
-    "src"
+    "src/**/*"
   ],
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
@@ -14,9 +14,11 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    "module": "commonjs",
+    // "ignoreDeprecations": "6.0",
     "target": "esnext",
-    "types": [],
+    // "lib": ["esnext"],
+    "types": ["node","jest"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -39,11 +41,14 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
 
+    "esModuleInterop": true,
+
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
   }
